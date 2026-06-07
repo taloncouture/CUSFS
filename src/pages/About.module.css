@@ -72,6 +72,12 @@
   gap: 1.25rem;
 }
 
+@media (max-width: 680px) {
+  .officerGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .officerCard {
   position: relative;
   padding: 1.5rem 1rem;
