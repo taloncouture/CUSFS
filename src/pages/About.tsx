@@ -19,13 +19,13 @@ export default function About() {
         <div className={styles.panel}>
           <p>
             The Columbia University Science Fiction Society (CUSFS) is a student
-            organization dedicated to exploring the worlds of science fiction, fantasy,
-            and speculative fiction. We meet weekly to discuss books, watch films,
-            run tabletop RPGs (TTRPGs), and geek out about all things sci-fi and fantasy.
+            organization dedicated to bringing together people who love to discuss science fiction and fantasy. 
+            We meet weekly to discuss watch movies,
+            run tabletop RPGs (TTRPGs), read short stories, and geek out about all things sci-fi and fantasy.
           </p>
           <p>
-            Whether you're a lifelong fan or just discovering the genre, all are
-            welcome aboard. Come boldly go where no Columbia student has gone before.
+            Whether you're a lifelong fan or just getting into it, all are
+            welcome aboard.
           </p>
           <p>
             Fun Fact: CUSFS is one of the oldest clubs at Columbia. However, throughout its lifespan it
