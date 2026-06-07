@@ -1,0 +1,127 @@
+.main {
+  position: relative;
+  z-index: 1;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 8rem 2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.rule {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--yellow), transparent);
+}
+
+.sectionTitle {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: var(--yellow);
+  white-space: nowrap;
+}
+
+.panel {
+  position: relative;
+  padding: 2rem 2.5rem;
+  background: rgba(6, 6, 13, 0.65);
+  border: 1px solid rgba(255, 184, 0, 0.18);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+  font-size: 0.95rem;
+  line-height: 1.9;
+  color: rgba(245, 240, 232, 0.7);
+}
+
+/* corner brackets */
+.panel::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background:
+    linear-gradient(var(--yellow), var(--yellow)) top    left  / 22px 2px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) top    left  / 2px 22px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) top    right / 22px 2px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) top    right / 2px 22px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) bottom left  / 22px 2px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) bottom left  / 2px 22px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) bottom right / 22px 2px no-repeat,
+    linear-gradient(var(--yellow), var(--yellow)) bottom right / 2px 22px no-repeat;
+  pointer-events: none;
+}
+
+.officerGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+}
+
+.officerCard {
+  position: relative;
+  padding: 1.5rem 1rem;
+  background: rgba(6, 6, 13, 0.65);
+  border: 1px solid rgba(196, 18, 48, 0.35);
+  text-align: center;
+  transition: border-color 0.2s;
+}
+
+.officerCard:hover {
+  border-color: rgba(196, 18, 48, 0.7);
+}
+
+/* red corner brackets on officer cards */
+.officerCard::before {
+  content: '';
+  position: absolute;
+  inset: -2px;
+  background:
+    linear-gradient(var(--bright-red), var(--bright-red)) top    left  / 12px 2px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) top    left  / 2px 12px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) top    right / 12px 2px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) top    right / 2px 12px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) bottom left  / 12px 2px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) bottom left  / 2px 12px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) bottom right / 12px 2px no-repeat,
+    linear-gradient(var(--bright-red), var(--bright-red)) bottom right / 2px 12px no-repeat;
+  pointer-events: none;
+}
+
+.officerRole {
+  font-family: var(--font-display);
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--yellow);
+  margin-bottom: 0.6rem;
+  text-transform: uppercase;
+}
+
+.officerName {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  color: var(--white);
+}
+
+.officerBonus {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  font-style: italic;
+  color: rgba(245, 240, 232, 0.45);
+  margin-top: 0.35rem;
+}

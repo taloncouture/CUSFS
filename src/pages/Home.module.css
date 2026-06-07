@@ -1,0 +1,137 @@
+.main {
+  position: relative;
+  z-index: 1;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5rem 2rem 2rem;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  max-width: 880px;
+  width: 100%;
+}
+
+.logoWrap {
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 260px;
+  height: auto;
+  filter:
+    drop-shadow(0 0 30px rgba(196, 18, 48, 0.7))
+    drop-shadow(0 0 70px rgba(255, 184, 0, 0.35));
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-14px); }
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(2.2rem, 5.5vw, 3.8rem);
+  font-weight: 900;
+  line-height: 1.05;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.tagline {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  font-style: italic;
+  line-height: 1.7;
+  color: rgba(245, 240, 232, 0.85);
+  letter-spacing: 0.04em;
+}
+
+.buttons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 0.9rem 1.75rem;
+  font-family: var(--font-display);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 2px solid;
+  position: relative;
+  transition: all 0.22s ease;
+  cursor: pointer;
+}
+
+/* inner bracket decoration */
+.btn::before {
+  content: '';
+  position: absolute;
+  inset: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  pointer-events: none;
+  transition: border-color 0.22s ease;
+}
+
+.btnDiscord {
+  background: rgba(114, 137, 218, 0.1);
+  border-color: var(--bright-red);
+  color: var(--white);
+}
+
+.btnDiscord:hover {
+  background: rgba(196, 18, 48, 0.25);
+  border-color: var(--yellow);
+  color: var(--yellow);
+  box-shadow: 0 0 24px rgba(255, 184, 0, 0.25), inset 0 0 12px rgba(196, 18, 48, 0.15);
+}
+
+.btnInstagram {
+  background: rgba(200, 75, 17, 0.1);
+  border-color: var(--yellow);
+  color: var(--yellow);
+}
+
+.btnInstagram:hover {
+  background: rgba(255, 184, 0, 0.18);
+  border-color: var(--bright-yellow);
+  color: var(--bright-yellow);
+  box-shadow: 0 0 24px rgba(255, 215, 0, 0.25), inset 0 0 12px rgba(255, 184, 0, 0.1);
+}
+
+@media (max-width: 680px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    gap: 2.5rem;
+    padding-top: 1rem;
+  }
+
+  .logo {
+    width: 200px;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+}

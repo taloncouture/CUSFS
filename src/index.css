@@ -1,0 +1,58 @@
+:root {
+  --space-black: #06060D;
+  --deep-red: #8B1A1A;
+  --bright-red: #C41230;
+  --warm-red: #CC2200;
+  --orange: #C84B11;
+  --yellow: #FFB800;
+  --bright-yellow: #FFD700;
+  --white: #F5F0E8;
+  --cream: #FFF8DC;
+  --dim: rgba(245, 240, 232, 0.5);
+
+  --font-display: 'Orbitron', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  background: var(--space-black);
+  color: var(--white);
+  font-family: var(--font-mono);
+  overflow-x: hidden;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+/* Scanline overlay */
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.06) 2px,
+    rgba(0, 0, 0, 0.06) 4px
+  );
+  pointer-events: none;
+  z-index: 9999;
+}
+
+a {
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--bright-yellow);
+}
